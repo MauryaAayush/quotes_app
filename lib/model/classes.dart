@@ -1,17 +1,25 @@
-import 'package:flutter/material.dart';
+import 'package:quotes/utils/Quoteslist.dart';
 
 class Model_Quotes
 {
-  String? Quotes;
-  String? Authors;
+  String? quotes;
+  String? authors;
+  List<Model_Quotes>? list = [];
 
-  Model_Quotes({this.Quotes ,this.Authors});
 
-  factory Model_Quotes.fromQuotes(Map Quotesmap)
+  Model_Quotes({this.quotes ,this.authors,this.list});
+
+  factory Model_Quotes.fromQuotes(Map quotesmap)
   {
     return Model_Quotes(
-        Quotes: Quotesmap['quote'],
-        Authors: Quotesmap['quote']
+        quotes: quotesmap['quote'],
+        authors: quotesmap['author']
     );
+  }
+
+
+  void tryy()
+  {
+    list = allquotes.map((e) => Model_Quotes.fromQuotes(e)).toList();
   }
 }

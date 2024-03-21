@@ -9,11 +9,14 @@ class Homescreen extends StatefulWidget {
   State<Homescreen> createState() => _HomescreenState();
 }
 
+
+
 class _HomescreenState extends State<Homescreen> {
   @override
   Widget build(BuildContext context) {
 
-    Model_Quotes model_quotes = Model_Quotes.fromQuotes(allquotes[0]);
+    Model_Quotes m1 =Model_Quotes();
+    m1.tryy();
 
     // double height = MediaQuery.of(context).size.height;
     // double width = MediaQuery.of(context).size.width;
@@ -28,8 +31,9 @@ class _HomescreenState extends State<Homescreen> {
         scrollDirection: Axis.vertical,
         child: Column(
           children: List.generate(allquotes.length, (index) => ListTile(
-            title: Text(model_quotes.Quotes!),
-              // subtitle: Text(model_quotes.authors!),
+            title: Text(m1.list![index].authors!),
+            // title: Text(Model_Quotes.fromQuotes(allquotes[index]).quotes!),
+              subtitle: Text(Model_Quotes.fromQuotes(allquotes[index]).quotes!),
         ),
 
                )
@@ -40,21 +44,3 @@ class _HomescreenState extends State<Homescreen> {
   }
 }
 
-
-class Model_Quotes
-{
-  String? Quotes;
-  String? Authors;
-
-  Model_Quotes({this.Quotes ,this.Authors});
-
-  factory Model_Quotes.fromQuotes(Map Quotes)
-  {
-    return Model_Quotes(
-        Quotes: Quotes['quote'],
-        Authors: Quotes['author']
-
-        // : Quotes['author']
-    );
-  }
-}
