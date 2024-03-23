@@ -10,12 +10,10 @@ class Homescreen extends StatefulWidget {
 }
 
 
-
 class _HomescreenState extends State<Homescreen> {
   @override
   Widget build(BuildContext context) {
-
-    Model_Quotes m1 =Model_Quotes();
+    Model_Quotes m1 = Model_Quotes();
     m1.tryy();
 
     // double height = MediaQuery.of(context).size.height;
@@ -25,19 +23,22 @@ class _HomescreenState extends State<Homescreen> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.teal,
-        title: const Text('Quotes',style: TextStyle(
-        color: Colors.white
-      ),),),
+        title: const Text('Quotes', style: TextStyle(
+            color: Colors.white
+        ),),),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
-          children: List.generate(allquotes.length, (index) => ListTile(
-            title: Text(m1.list![index].authors!),
-            // title: Text(Model_Quotes.fromQuotes(allquotes[index]).quotes!),
-              subtitle: Text(Model_Quotes.fromQuotes(allquotes[index]).quotes!),
-        ),
+            children: List.generate(allquotes.length, (index) =>
+                ListTile(
+                  title: Text(m1.list![index].authors!),
+                  // title: Text(Model_Quotes.fromQuotes(allquotes[index]).quotes!),
+                  subtitle: Text(Model_Quotes
+                      .fromQuotes(allquotes[index])
+                      .quotes!),
+                ),
 
-               )
+            )
 
         ),
       ),
