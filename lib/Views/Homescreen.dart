@@ -23,6 +23,7 @@ class _HomescreenState extends State<Homescreen> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.teal,
+
         title: const Text('Quotes', style: TextStyle(
             color: Colors.white
         ),),),
