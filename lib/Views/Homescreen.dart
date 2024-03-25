@@ -21,10 +21,11 @@ class _HomescreenState extends State<Homescreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.teal,
+        toolbarHeight: 80,
+        backgroundColor: Colors.black,
         title: const Text(
           'Quotes',
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.teal,fontSize: 25),
         ),
       ),
       body: Stack(
@@ -58,7 +59,7 @@ class _HomescreenState extends State<Homescreen> {
                               color: Colors.teal,
                               spreadRadius: 2,
                               blurRadius: 10,
-                              offset: Offset(1, 4))
+                              offset: Offset(10, 10))
                         ]),
                     child: ListTile(
                       title: Text(
