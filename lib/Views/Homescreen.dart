@@ -58,7 +58,7 @@ class _HomescreenState extends State<Homescreen> {
                               color: Colors.teal,
                               spreadRadius: 2,
                               blurRadius: 10,
-                              offset: Offset(5, 5))
+                              offset: Offset(1, 4))
                         ]),
                     child: ListTile(
                       title: Text(
