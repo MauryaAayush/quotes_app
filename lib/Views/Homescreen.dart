@@ -58,8 +58,8 @@ class _HomescreenState extends State<Homescreen> {
                           BoxShadow(
                               color: Colors.teal,
                               spreadRadius: 2,
-                              blurRadius: 10,
-                              offset: Offset(10, 10))
+                              blurRadius: 20,
+                              offset: Offset(2, 2))
                         ]),
                     child: ListTile(
                       title: Text(
@@ -71,7 +71,7 @@ class _HomescreenState extends State<Homescreen> {
                       ),
                       subtitle: Text(
                         ' ~ ${Model_Quotes.fromQuotes(allquotes[index]).authors!}',
-                        style: TextStyle(color: Colors.white70, fontSize: 20),
+                        style: TextStyle(color: Colors.teal, fontSize: 20),
                       ),
                     ),
                   ),
