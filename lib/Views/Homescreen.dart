@@ -30,53 +30,50 @@ class _HomescreenState extends State<Homescreen> {
       body: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(
-              color: Colors.black
-              // image: DecorationImage(
-              //   image: AssetImage('assets/images/download.jpeg'), // Replace 'assets/background_image.jpg' with your image path
-              //   fit: BoxFit.cover,
-              // ),
-            ),
+            decoration: BoxDecoration(color: Colors.black
+                // image: DecorationImage(
+                //   image: AssetImage('assets/images/download.jpeg'), // Replace 'assets/background_image.jpg' with your image path
+                //   fit: BoxFit.cover,
+                // ),
+                ),
           ),
           SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Column(
               children: [
                 SizedBox(height: 30),
-
-                ...List.generate(allquotes.length, (index) =>  Container(
-                  margin: EdgeInsets.symmetric(vertical: height*0.02,horizontal: width*0.06),
-                  // height: height * 0.3,
-                  // width: width * 0.75,
-                  decoration: BoxDecoration(
-                    color: Colors.black,
-                    // color: Colors.teal.withOpacity(0.8),
-                    borderRadius: BorderRadius.circular(width*0.02),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.teal,
-                        spreadRadius: 2,
-                        blurRadius: 10,
-                        offset: Offset(5, 5)
-                      )
-                    ]
+                ...List.generate(
+                  allquotes.length,
+                  (index) => Container(
+                    margin: EdgeInsets.symmetric(
+                        vertical: height * 0.02, horizontal: width * 0.06),
+                    // height: height * 0.3,
+                    // width: width * 0.75,
+                    decoration: BoxDecoration(
+                        color: Colors.black,
+                        // color: Colors.teal.withOpacity(0.8),
+                        borderRadius: BorderRadius.circular(width * 0.02),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.teal,
+                              spreadRadius: 2,
+                              blurRadius: 10,
+                              offset: Offset(5, 5))
+                        ]),
+                    child: ListTile(
+                      title: Text(
+                        m1.list![index].quotes!,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 30,
+                            fontWeight: FontWeight.w600),
+                      ),
+                      subtitle: Text(
+                        ' ~ ${Model_Quotes.fromQuotes(allquotes[index]).authors!}',
+                        style: TextStyle(color: Colors.white70, fontSize: 20),
+                      ),
+                    ),
                   ),
-                  child: ListTile(
-                    title: Text(m1.list![index].quotes!,style: TextStyle(
-                        color: Colors.white,
-                      fontSize: 30,
-                      fontWeight: FontWeight.w600
-                    ),),
-                    subtitle: Text(
-                      ' ~ ${Model_Quotes.fromQuotes(allquotes[index]).authors!}',style: TextStyle(
-                        color: Colors.white70,
-                      fontSize: 20
-                    ),),
-                  ),
-                ),
-
-
-
                 ),
               ],
             ),
