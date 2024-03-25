@@ -3,12 +3,11 @@ import 'package:quotes/model/classes.dart';
 import 'package:quotes/utils/Quoteslist.dart';
 
 class Homescreen extends StatefulWidget {
-  const Homescreen({super.key});
+  const Homescreen({Key? key}) : super(key: key);
 
   @override
   State<Homescreen> createState() => _HomescreenState();
 }
-
 
 class _HomescreenState extends State<Homescreen> {
   @override
@@ -16,33 +15,54 @@ class _HomescreenState extends State<Homescreen> {
     Model_Quotes m1 = Model_Quotes();
     m1.tryy();
 
-    // double height = MediaQuery.of(context).size.height;
-    // double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
 
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.teal,
-        title: const Text('Quotes', style: TextStyle(
-            color: Colors.white
-        ),),),
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-            children: List.generate(allquotes.length, (index) =>
-                ListTile(
-                  title: Text(m1.list![index].authors!),
-                  // title: Text(Model_Quotes.fromQuotes(allquotes[index]).quotes!),
-                  subtitle: Text(Model_Quotes
-                      .fromQuotes(allquotes[index])
-                      .quotes!),
-                ),
-
-            )
-
+        title: const Text(
+          'Quotes',
+          style: TextStyle(color: Colors.white),
         ),
+      ),
+      body: Stack(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/images.jpeg'), // Replace 'assets/background_image.jpg' with your image path
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              children: [
+                SizedBox(height: 30),
+                Container(
+                  height: height * 0.3,
+                  width: width * 0.75,
+                  decoration: BoxDecoration(
+                    color: Colors.yellowAccent,
+                  ),
+                ),
+                ...List.generate(allquotes.length, (index) => ListTile(
+                  title: Text(m1.list![index].authors!,style: TextStyle(
+                    color: Colors.white70
+                  ),),
+                  subtitle: Text(
+                      Model_Quotes.fromQuotes(allquotes[index]).quotes!,style: TextStyle(
+                     color: Colors.white
+                  ),),
+                )),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
 }
-
