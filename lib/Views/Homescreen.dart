@@ -35,10 +35,10 @@ class _HomescreenState extends State<Homescreen> {
             builder: (context) => AlertDialog(
               backgroundColor: Colors.black,
               title: Text(m1.list![Random_Number].authors!,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
               ),
               content: Text(m1.list![Random_Number].quotes!,
-                style: TextStyle(color: Colors.white,fontSize: 15),
+                style: const TextStyle(color: Colors.white,fontSize: 15),
 
               ),
               actions: [
