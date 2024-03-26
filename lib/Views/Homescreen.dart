@@ -40,6 +40,7 @@ class _HomescreenState extends State<Homescreen> {
                       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                           content: Text(
                               'Your text is copies in the favorite lits')));
+                      Navigator.of(context).pop();
                     },
                     child: Text('Save')),
                 TextButton(
