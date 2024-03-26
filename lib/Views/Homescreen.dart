@@ -22,35 +22,44 @@ class _HomescreenState extends State<Homescreen> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.teal,
         onPressed: () {
-          showDialog(context: context, builder: (context) => AlertDialog(
-            backgroundColor: Colors.black,
-            title: Text('Hello',style: TextStyle(
-              color: Colors.white
-            ),),
-            content: Text('This the main text',style: TextStyle(
-              color: Colors.white
-            ),),
-            actions: [
-              TextButton(onPressed: () {
-
-              }, child: Text('Save')),
-              TextButton(onPressed: () {
-                Navigator.of(context).pop();
-              }, child: Text('Cancel'))
-            ],
-
-          ),);
+          showDialog(
+            context: context,
+            builder: (context) => AlertDialog(
+              backgroundColor: Colors.black,
+              title: Text(
+                'Hello',
+                style: TextStyle(color: Colors.white),
+              ),
+              content: Text(
+                'This the main text',
+                style: TextStyle(color: Colors.white),
+              ),
+              actions: [
+                TextButton(
+                    onPressed: () {
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                          content: Text(
+                              'Your text is copies in the favorite lits')));
+                    },
+                    child: Text('Save')),
+                TextButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: Text('Cancel'))
+              ],
+            ),
+          );
         },
         child: Icon(Icons.lightbulb),
       ),
-
       appBar: AppBar(
         centerTitle: true,
         toolbarHeight: 80,
         backgroundColor: Colors.black,
         title: const Text(
           'Quotes',
-          style: TextStyle(color: Colors.teal,fontSize: 25),
+          style: TextStyle(color: Colors.teal, fontSize: 25),
         ),
       ),
       body: Stack(
