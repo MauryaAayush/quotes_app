@@ -23,14 +23,19 @@ class _HomescreenState extends State<Homescreen> {
         backgroundColor: Colors.teal,
         onPressed: () {
           showDialog(context: context, builder: (context) => AlertDialog(
-            title: Text('Hello'),
-            content: Text('This the main text'),
+            backgroundColor: Colors.black,
+            title: Text('Hello',style: TextStyle(
+              color: Colors.white
+            ),),
+            content: Text('This the main text',style: TextStyle(
+              color: Colors.white
+            ),),
             actions: [
               TextButton(onPressed: () {
 
               }, child: Text('Save')),
               TextButton(onPressed: () {
-
+                Navigator.of(context).pop();
               }, child: Text('Cancel'))
             ],
 
