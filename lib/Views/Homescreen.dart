@@ -19,6 +19,14 @@ class _HomescreenState extends State<Homescreen> {
     double width = MediaQuery.of(context).size.width;
 
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.teal,
+        onPressed: () {
+          showDialog(context: context, builder: (context) => ,)
+        },
+        child: Icon(Icons.lightbulb),
+      ),
+
       appBar: AppBar(
         centerTitle: true,
         toolbarHeight: 80,
