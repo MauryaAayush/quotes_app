@@ -22,7 +22,11 @@ class _HomescreenState extends State<Homescreen> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.teal,
         onPressed: () {
-          showDialog(context: context, builder: (context) => ,)
+          showDialog(context: context, builder: (context) => AlertDialog(
+            title: Text('Hello'),
+            content: Text('This the main text'),
+
+          ),);
         },
         child: Icon(Icons.lightbulb),
       ),
