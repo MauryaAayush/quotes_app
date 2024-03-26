@@ -26,13 +26,12 @@ class _HomescreenState extends State<Homescreen> {
             context: context,
             builder: (context) => AlertDialog(
               backgroundColor: Colors.black,
-              title: Text(
-                'Hello',
+              title: Text(m1.list![0].authors!,
                 style: TextStyle(color: Colors.white),
               ),
-              content: Text(
-                'This the main text',
-                style: TextStyle(color: Colors.white),
+              content: Text(m1.list![0].quotes!,
+                style: TextStyle(color: Colors.white,fontSize: 17),
+
               ),
               actions: [
                 TextButton(
