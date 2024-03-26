@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:quotes/model/classes.dart';
 import 'package:quotes/utils/Quoteslist.dart';
@@ -8,6 +10,8 @@ class Homescreen extends StatefulWidget {
   @override
   State<Homescreen> createState() => _HomescreenState();
 }
+Random random = Random();
+int Random_Number = 0;
 
 class _HomescreenState extends State<Homescreen> {
   @override
@@ -22,15 +26,19 @@ class _HomescreenState extends State<Homescreen> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.teal,
         onPressed: () {
+        setState(() {
+          Random_Number = random.nextInt(allquotes.length);
+        });
+
           showDialog(
             context: context,
             builder: (context) => AlertDialog(
               backgroundColor: Colors.black,
-              title: Text(m1.list![0].authors!,
+              title: Text(m1.list![Random_Number].authors!,
                 style: TextStyle(color: Colors.white),
               ),
-              content: Text(m1.list![0].quotes!,
-                style: TextStyle(color: Colors.white,fontSize: 17),
+              content: Text(m1.list![Random_Number].quotes!,
+                style: TextStyle(color: Colors.white,fontSize: 15),
 
               ),
               actions: [
