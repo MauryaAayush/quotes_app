@@ -25,6 +25,14 @@ class _HomescreenState extends State<Homescreen> {
           showDialog(context: context, builder: (context) => AlertDialog(
             title: Text('Hello'),
             content: Text('This the main text'),
+            actions: [
+              TextButton(onPressed: () {
+
+              }, child: Text('Save')),
+              TextButton(onPressed: () {
+
+              }, child: Text('Cancel'))
+            ],
 
           ),);
         },
