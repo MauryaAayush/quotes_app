@@ -1,4 +1,6 @@
 # quotes
+<img src = "https://github.com/MauryaAayush/quotes_app/assets/143180849/05774fe5-faf4-4822-bc91-26a5a6f698d1" height = 500px>
+<img src = "https://github.com/MauryaAayush/quotes_app/assets/143180849/a5b071aa-1ee5-408c-964c-883e066ab3e7" height = 500px>
 
 <img src = "https://github.com/MauryaAayush/quotes_app/assets/143180849/24220d31-7aa7-411d-818a-c61f3796087a" height = 500px>
 <img src = "https://github.com/MauryaAayush/quotes_app/assets/143180849/6377b0a1-77a8-4aea-b80e-d5d67f198dac" height = 500px>
