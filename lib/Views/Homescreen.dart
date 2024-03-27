@@ -34,7 +34,7 @@ class _HomescreenState extends State<Homescreen> {
             context: context,
             builder: (context) => AlertDialog(
               backgroundColor: Colors.black,
-              title: Text(m1.list![Random_Number].authors!,
+              title: Text('${m1.list![Random_Number].authors!}    $Random_Number ',
                 style: const TextStyle(color: Colors.white),
               ),
               content: Text(m1.list![Random_Number].quotes!,
