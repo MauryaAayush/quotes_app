@@ -34,7 +34,7 @@ class _HomescreenState extends State<Homescreen> {
             context: context,
             builder: (context) => AlertDialog(
               backgroundColor: Colors.black,
-              title: Text('${m1.list![Random_Number].authors!}    $Random_Number ',
+              title: Text('${m1.list![Random_Number].authors!}  -  $Random_Number ',
                 style: const TextStyle(color: Colors.white),
               ),
               content: Text(m1.list![Random_Number].quotes!,
@@ -49,12 +49,16 @@ class _HomescreenState extends State<Homescreen> {
                               'Your text is copies in the favorite lits')));
                       Navigator.of(context).pop();
                     },
-                    child: Text('Save')),
+                    child: Text('Save',style: TextStyle(
+                      color: Colors.teal
+                    ),)),
                 TextButton(
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
-                    child: Text('Cancel'))
+                    child: Text('Cancel',style: TextStyle(
+                      color: Colors.teal
+                    ),))
               ],
             ),
           );
