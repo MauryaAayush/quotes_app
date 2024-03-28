@@ -100,7 +100,7 @@ class _HomescreenState extends State<Homescreen> {
                         color: Colors.black,
                         // color: Colors.teal.withOpacity(0.8),
                         borderRadius: BorderRadius.circular(width * 0.02),
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                               color: Colors.teal,
                               spreadRadius: 2,
