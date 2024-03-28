@@ -117,7 +117,7 @@ class _HomescreenState extends State<Homescreen> {
                       ),
                       subtitle: Text(
                         ' ~ ${Model_Quotes.fromQuotes(allquotes[index]).authors!}',
-                        style: TextStyle(color: Colors.teal, fontSize: 20),
+                        style: const TextStyle(color: Colors.teal, fontSize: 20),
                       ),
                     ),
                   ),
