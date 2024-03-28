@@ -110,7 +110,7 @@ class _HomescreenState extends State<Homescreen> {
                     child: ListTile(
                       title: Text(
                         m1.list![index].quotes!,
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: Colors.white,
                             fontSize: 30,
                             fontWeight: FontWeight.w600),
