@@ -77,7 +77,7 @@ class _HomescreenState extends State<Homescreen> {
       body: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(color: Colors.black
+            decoration: const BoxDecoration(color: Colors.black
                 // image: DecorationImage(
                 //   image: AssetImage('assets/images/download.jpeg'), // Replace 'assets/background_image.jpg' with your image path
                 //   fit: BoxFit.cover,
